@@ -1,0 +1,37 @@
+a{
+    color: rgb(30, 108, 185);
+}
+#capa{
+    text-align: center;
+    margin-top: 1%;
+}
+h5{
+    text-align: justify;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+h4{
+    text-align: justify;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+h2{
+    margin-left: 20%;
+}
+#direito{
+    text-align: center;
+}
+
+li{
+    margin-left: 22%;
+    margin-right: 30%;
+}
+form{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#logo{
+    margin-left: 20%;
+    margin-right: 32%;
+    margin-top: 10px;
+}
