@@ -2,5 +2,37 @@
 
 {% block padrão %}
 <br><br><br><br>
-oi
+<table>
+    <thead>
+
+        <tr>
+
+            <th>E-mail</th>      
+            <th>Assunto</th>
+            <th>Descrição</th>  
+        </tr>
+    </thead>
+
+    {% for user in userDetails %}
+    
+    <tbody>
+        <tr>
+            <td>{{user[0]}}</td>
+            <td>{{user[1]}}</td>
+            <td>{{user[2]}}</td>
+        </tr>
+    </tbody>
+   
+
+    {% endfor %}
+
+    <tbody>
+        <tr>
+            <td>Jean</td>
+            <td>Flask</td>
+            <td>HTML</td>
+        </tr>
+    </tbody>
+
+</table>
 {% endblock %}

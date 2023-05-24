@@ -6,7 +6,7 @@ app = Flask("__name__")
 app.config['MYSQL_Host'] = '127.0.0.1'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'contatos'
+app.config['MYSQL_DB'] = 'desafio3'
 
 mysql = MySQL(app)
 
@@ -28,16 +28,16 @@ def contato():
     if request.method == 'POST':
         email = request.form['email']
         assunto = request.form['assunto']
-        descricao = request.form['descrição']
+        descricao = request.form['descricao']
 
         cur = mysql.connection.cursor()
-        cur.execute('INSERT INTO contatos(email, assunto, descricao) VALUES (%s %s %s)', (email, assunto, descricao))
+        cur.execute('INSERT INTO contatos(email, assunto, descricao) VALUES (%s, %s, %s)', (email, assunto, descricao))
 
         mysql.connection.commit()
 
         cur.close()
 
-        return 'Sucesso!'
+        return 'Sucesso!' and render_template('contato.html')
     return render_template('contato.html')
 
 @app.route('/users')
