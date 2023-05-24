@@ -1,38 +1,31 @@
 {% extends 'base.html' %}
 
 {% block padrão %}
-<br><br><br><br>
-<table>
-    <thead>
-
-        <tr>
-
-            <th>E-mail</th>      
-            <th>Assunto</th>
-            <th>Descrição</th>  
-        </tr>
-    </thead>
-
-    {% for user in userDetails %}
+<br><hr><br><br><br><br><br>
+<div>
+    <table>
     
-    <tbody>
         <tr>
-            <td>{{user[0]}}</td>
-            <td>{{user[1]}}</td>
-            <td>{{user[2]}}</td>
+    
+            <th id="desc">E-mail</th>      
+            <th id="desc">Assunto</th>
+            <th id="desc">Descrição</th>  
         </tr>
-    </tbody>
-   
+    
+        {% for user in userDetails %}
+        
+        <tbody>
+            <tr>
+                <td id="desc">{{user[0]}}</td>
+                <td id="desc">{{user[1]}}</td>
+                <td id="desc">{{user[2]}}</td>
+            </tr>
+        </tbody>
+       
+    
+        {% endfor %}
+    
+    </table>
+</div>
 
-    {% endfor %}
-
-    <tbody>
-        <tr>
-            <td>Jean</td>
-            <td>Flask</td>
-            <td>HTML</td>
-        </tr>
-    </tbody>
-
-</table>
 {% endblock %}

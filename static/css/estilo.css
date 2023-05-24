@@ -36,3 +36,12 @@ form{
     margin-top: 10px;
 }
 
+#desc{
+    border: 2px;
+    border-style: solid;
+}
+
+table{
+    align-items: center;
+    margin: auto;    
+}
